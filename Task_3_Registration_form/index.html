@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Registration form</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col-4" style="padding-top: 150px;">
+                    <h2>Enrollment Form</h2>
+                    <table border="0">
+                      <thead>
+                          <tr>
+                              <th>&emsp;First Name&emsp;</th>
+                              <td><input type="text" name="fname" id="fname" required></td>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <th>Last Name</th>
+                              <td><input type="text" name="lname" id="lname" required></td>
+                          </tr>
+                          <tr>
+                              <th>Email</th>
+                              <td><input type="text" name="email" id="email" required ></td>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <td><input type="text" name="address" id="address" required ></td>
+                    </tr>
+                    <tr>
+                        <th>Age</th>
+                        <td><input type="text" name="age" id="age" required></td> 
+                    </tr>
+                      
+                    <tr id="btna">
+                        <td colspan="2"><input type="button" name="button" id="btn" value="Add" onclick="AddData()"></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+                <div class="col-4" style="padding-top: 150px;">
+                    <H2> STUDENT'S DATA</H2>
+                    <table border="0" id="Show">
+                        <thead>
+                           <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Adress</th>
+                            <th>Age</th>
+                           </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

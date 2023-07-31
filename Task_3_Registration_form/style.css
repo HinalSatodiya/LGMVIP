@@ -1,0 +1,23 @@
+body{
+    background-image: linear-gradient(to right, rgb(252, 212, 212) , rgb(165, 228, 255));
+}
+
+table{
+ margin-top: 50px;
+ text-align: center;
+ color: rgb(0,0,0);
+}
+
+th,td{
+    padding: 10px;
+}
+
+#Show th, #Show td{
+ padding: 20px;
+
+}
+
+#btn td input{
+    width: 100%;
+    background-color: rgb(124, 124, 8);
+}
