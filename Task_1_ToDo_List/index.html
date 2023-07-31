@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-App="todoapp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="todoCtrl" ng-init="init()">
+    <div class="container">
+        <div class="inputdetail">
+            <header>
+                <div>
+                    <span><b>Task For Today</b></span>
+                </div>
+            </header>
+            <form ng-submit="addtask()">
+                <input type="text" ng-model="taskDesc">
+                <input type="submit" class="add" value="add list">
+                <div> {{remainingCount()}} out of {{tasklist.length}} is remaining</div>
+            </form>
+        </div>
+        <div class="todolist">
+            <div class="tododetail" ng-repeat="task in tasklist">
+                <input type="checkbox" id="t{{$index}}" ng-model="task.status" class="checkbox">
+                <span for="t{{$index}}">{{task.taskDesc}}</span>
+                <span class="icon" ng-click="deletetask($index)"><i class="fa-solid fa-xmark"></i></span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+<script src="angular.min.js"></script>
+</html>
